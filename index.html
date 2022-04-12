@@ -1,3 +1,44 @@
 <html>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    #root {
+      width: 100%;
+      height: 100%;
+    }
+
+    #start {
+      position: absolute;
+      left: 25px;
+      top: 25px;
+    }
+
+    #generation {
+      position: absolute;
+      left: 350px;
+      top: 308px;
+      width: 100px;
+      height: 5px;
+      background: white;
+      border-radius: 64px;
+    }
+  </style>
+
+  <div id="root">
+    <button id="start">Start</button>
+
+    <svg id="balance" style="position: absolute; left: 300px; top: 300px">
+      <rect width="200" height="20" fill="#ccc" />
+      <rect x="50" y="20" width="100" height="10" fill="#aaa" />
+      <path d="M 0,90 L 20,30 H 180 L 200,90" fill="#ccc" />
+      <path d="M 100,70 m -30,3 a 30,30 0,0,1 60,0 z" fill="white" />
+      <path d="M 100,70 m 0,3 l 30,0 a 30,30 0,0,0 -1.6,-10 z" fill="red" />
+    </svg>
+
+    <div id="generation"></div>
+  </div>
+
   <script src="src/index.ts"></script>
 </html>
